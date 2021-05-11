@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)file:///C:/Users/tops/Downloads/demologin%20(1).html -->
+<html lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title></title>
+  </head>
+  <body>
+    <form>
+      Username: <input type="text" id="uname"> <br>
+      Password: <input type="password" id="pswrd"> <br>
+
+      <input type="submit" onclick="login()" value="LOGIN">
+    </form>
+
+    <script type="text/javascript">
+      function login() {
+        var duname = "admin"
+        var dpswrd = "admin"
+
+        uname = document.getElementById('uname').value;
+        pswrd = document.getElementById('pswrd').value;
+
+        if (duname == uname && dpswrd == pswrd) {
+          alert("Welcome to UCU");
+        }
+
+        else if (duname != uname && dpswrd == pswrd) {
+          alert("Invalid Username");
+        }
+
+        else if (duname == uname && dpswrd != pswrd) {
+          alert("Invalid Password");
+        }
+        else {
+          alert("Access Denied!");
+        }
+
+      }
+    </script>
+  
+</body></html>
